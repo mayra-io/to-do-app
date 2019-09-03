@@ -42,7 +42,7 @@ class TodoListsController < ApplicationController
   # DELETE /todo_lists/1
   def destroy
     @todo_list.destroy
-    redirect_to todo_lists_url, notice: 'Todo list was successfully destroyed.'
+    redirect_to root_url, notice: 'Todo list was successfully destroyed.'
   end
 
   private
