@@ -24,7 +24,7 @@ class TodoListsController < ApplicationController
     @todo_list = TodoList.new(todo_list_params)
 
     if @todo_list.save
-      redirect_to @todo_list, notice: 'Todo list was successfully created.'
+      redirect_to @todo_list, notice: 'To do list was successfully created.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class TodoListsController < ApplicationController
   # PATCH/PUT /todo_lists/1
   def update
     if @todo_list.update(todo_list_params)
-      redirect_to @todo_list, notice: 'Todo list was successfully updated.'
+      redirect_to @todo_list, notice: 'To do list was successfully updated.'
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class TodoListsController < ApplicationController
   # DELETE /todo_lists/1
   def destroy
     @todo_list.destroy
-    redirect_to root_url, notice: 'Todo list was successfully destroyed.'
+    redirect_to root_url, notice: 'To do list was successfully destroyed.'
   end
 
   private
